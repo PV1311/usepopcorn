@@ -4,8 +4,8 @@ import StarRating from "./StarRating";
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-// const KEY = "f608407f";
-const KEY = process.env.REACT_APP_OMDB_API_KEY;
+const KEY = "f608407f";
+// const KEY = process.env.REACT_APP_OMDB_API_KEY;
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -13,8 +13,6 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [selectedId, setSelectedId] = useState(null);
-
-  // CORRECT CURRENTLY WORKING CODE IS IN App.js AFTER ALL CODE EXTRACTIONS:
 
   // const [watched, setWatched] = useState([]);
   const [watched, setWatched] = useState(function () {
